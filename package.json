@@ -8,6 +8,8 @@
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
     "erlpack": "^0.1.2",
+    "fetch-subreddit": "^3.0.0",
+    "hepburn": "^1.1.1",
     "node-opus": "^0.3.0",
     "sqlite": "^3.0.0",
     "uws": "^99.0.0",

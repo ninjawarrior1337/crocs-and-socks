@@ -1,7 +1,7 @@
 const Commando = require('discord.js-commando');
 const path = require('path');
 const sqlite = require('sqlite');
-const secrets = require("secrets")
+const secrets = require("./secrets.json")
 
 
 const client = new Commando.Client({
@@ -11,7 +11,9 @@ const client = new Commando.Client({
 
 client.registry
     .registerGroups([
-       ['music', "Audio related commands"]
+       ['music', "Audio related commands"],
+       ['weeb', "Weeb related commands"],
+       ['fun', "Fun related commands"]
     ])
 
     .registerDefaults()
@@ -25,4 +27,8 @@ client.login(secrets.token);
 
 client.on("ready", (c) => {
     console.log(`Sucessfully logged in as ${client.user.username}`)
+})
+
+process.on("SIGINT", () => {
+    client.destroy()
 })
