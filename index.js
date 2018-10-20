@@ -1,0 +1,28 @@
+const Commando = require('discord.js-commando');
+const path = require('path');
+const sqlite = require('sqlite');
+const secrets = require("secrets")
+
+
+const client = new Commando.Client({
+    owner: "102939281470816256",
+    commandPrefix: "%"
+});
+
+client.registry
+    .registerGroups([
+       ['music', "Audio related commands"]
+    ])
+
+    .registerDefaults()
+    .registerCommandsIn(path.join(__dirname, "commands"));
+
+client.setProvider(
+    sqlite.open(path.join(__dirname, 'database.sqlite3')).then(db => new Commando.SQLiteProvider(db))
+).catch(console.error);
+
+client.login(secrets.token);
+
+client.on("ready", (c) => {
+    console.log(`Sucessfully logged in as ${client.user.username}`)
+})
