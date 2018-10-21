@@ -29,6 +29,8 @@ client.on("ready", (c) => {
     console.log(`Sucessfully logged in as ${client.user.username}`)
 })
 
+
+
 process.on("SIGINT", () => {
     client.destroy()
 })

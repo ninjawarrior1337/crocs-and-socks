@@ -18,7 +18,8 @@ module.exports = class playAudio extends commando.Command
                     prompt: "What URL would you like to play",
                     type: "string",
                 }
-            ]
+            ],
+            guildOnly: true
         });
     }
 

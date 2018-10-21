@@ -10,7 +10,7 @@ module.exports = class moe extends commando.Command
             group: "music",
             memberName: "moe",
             description: "Play music from listen.moe",
-            guild: true
+            guildOnly: true
         })
     }
 
