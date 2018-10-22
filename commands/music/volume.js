@@ -24,7 +24,7 @@ module.exports = class audioVolume extends commando.Command
     async run(msg, args)
     {
         const connection = msg.guild.voiceConnection.dispatcher;
-        await connection.setVolume(args.vol);
+        await connection.setVolumeLogarithmic(args.vol/100);
     }
 
 }

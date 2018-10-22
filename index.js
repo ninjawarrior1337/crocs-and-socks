@@ -6,7 +6,8 @@ const secrets = require("./secrets.json")
 
 const client = new Commando.Client({
     owner: "102939281470816256",
-    commandPrefix: "%"
+    commandPrefix: "%",
+    unknownCommandResponse: false,
 });
 
 client.registry
@@ -27,6 +28,7 @@ client.login(secrets.token);
 
 client.on("ready", (c) => {
     console.log(`Sucessfully logged in as ${client.user.username}`)
+    client.user.setActivity('osu!');
 })
 
 

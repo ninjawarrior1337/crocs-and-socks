@@ -1,0 +1,26 @@
+const commando = require('discord.js-commando');
+const musicMetadata = require('music-metadata');
+const fs = require('fs');
+const request = require('request');
+
+module.exports = class moe extends commando.Command
+{
+    constructor(client) {
+        super(client, {
+            name: "songinfo",
+            aliases: ['si', 'sinfo', 'songinfo'],
+            group: "music",
+            memberName: "songinfo",
+            description: "Song info gets the info of the currently playing song.",
+            guild: true
+        })
+    }
+
+    async run(msg)
+    {
+        var stream = request("https://listen.moe/stream").pipe(fs.createWriteStream("test.ogg"));
+        const metdata = await musicMetadata.parseStream(fs.createReadStream("test.ogg"));
+        await msg.reply(metdata.common.title);
+        fs.unlink(fs.createWriteStream("test.ogg"))
+    }
+}
