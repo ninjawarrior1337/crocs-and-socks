@@ -14,9 +14,9 @@ client.registry
     .registerGroups([
        ['music', "Audio related commands"],
        ['weeb', "Weeb related commands"],
-       ['fun', "Fun related commands"]
+       ['fun', "Fun related commands"],
+        ['testing', "Bot testing commands"]
     ])
-
     .registerDefaults()
     .registerCommandsIn(path.join(__dirname, "commands"));
 

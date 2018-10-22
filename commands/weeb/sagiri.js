@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando')
 const randomSubPost = require('../../helpers/randomSubPost')
 
-module.exports = class animeme extends commando.Command
+module.exports = class sagiri extends commando.Command
 {
     constructor(client)
     {

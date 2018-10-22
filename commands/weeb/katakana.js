@@ -1,7 +1,7 @@
 const commando = require("discord.js-commando")
 const hepburn = require("hepburn")
 
-module.exports = class hiragana extends commando.Command
+module.exports = class katakana extends commando.Command
 {
     constructor(client)
     {
