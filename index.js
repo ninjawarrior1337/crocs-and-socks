@@ -15,7 +15,8 @@ client.registry
         ['music', "Audio related commands"],
         ['weeb', "Weeb related commands"],
         ['fun', "Fun related commands"],
-        ['testing', "Bot testing commands"]
+        ['testing', "Bot testing commands"],
+        ['utils', "Utilities related commands"]
     ])
     .registerDefaults()
     .registerCommandsIn(path.join(__dirname, "commands"));
