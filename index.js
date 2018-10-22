@@ -12,9 +12,9 @@ const client = new Commando.Client({
 
 client.registry
     .registerGroups([
-       ['music', "Audio related commands"],
-       ['weeb', "Weeb related commands"],
-       ['fun', "Fun related commands"],
+        ['music', "Audio related commands"],
+        ['weeb', "Weeb related commands"],
+        ['fun', "Fun related commands"],
         ['testing', "Bot testing commands"]
     ])
     .registerDefaults()

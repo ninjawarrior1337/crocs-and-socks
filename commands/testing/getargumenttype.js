@@ -1,5 +1,4 @@
 const commando = require('discord.js-commando')
-const randomSubPost = require('../../helpers/randomSubPost')
 
 module.exports = class getType extends commando.Command
 {
