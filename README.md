@@ -2,6 +2,9 @@
 
 The Discord Bot of The Future (未来ずら！) (Mirai Zura!)
 
+# DISCLAIMER
+I AM **NOT** RESPONSIBLE IF THE BOT SENDS NSFW PICS IN A CHAT WITH THE REDDIT COMMAND, YOU HAVE BEEN WARNED.
+
 # How to Install
 ```bash
 ~$ git clone https://github.com/ninjawarrior1337/crocs-and-socks.git
