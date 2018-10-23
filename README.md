@@ -50,4 +50,5 @@ Command Name | What it do
 -------- | --------
 nesoberi | Sends a random recent nesoberi post from [r/nesoberi](http://reddit.com/r/nesoberi)
 sagiri | Sends a random recent sagiri post from [r/onetruelittlesister](http://reddit.com/r/onetruelittlesister)
-lovelive | Sends a rand 
+lovelive | Sends a random recent love live post from  [r/lovelive](http://reddit.com/r/lovelive)
+animeme | Sends a random recent animeme from [r/animemes](http://reddit.com/r/animemes)
