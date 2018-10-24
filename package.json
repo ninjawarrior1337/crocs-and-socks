@@ -20,7 +20,7 @@
     "sqlite": "^3.0.0",
     "underscore": "^1.9.1",
     "uws": "^99.0.0",
-    "ytdl-core": "^0.25.2"
+    "ytdl-core": "^0.26.3"
   },
   "devDependencies": {},
   "scripts": {
