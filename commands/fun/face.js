@@ -16,7 +16,7 @@ class face extends commando.Command
 	
 	async run(msg)
 	{
-		msg.channel.send(getFace())
+		msg.channel.send(getFace().toString())
 	}
 	
 }
