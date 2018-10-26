@@ -73,35 +73,50 @@ class lldb extends commando.Command
                     fields: [
                         {
                             name: "Age",
-                            value: idol.age ? idol.age : 'Unknown'
+                            value: idol.age ? idol.age : 'Unknown',
+                            inline: true
                         },
                         {
                             name: "Astrological Sign",
-                            value: idol.astrological_sign ? idol.astrological_sign : 'Unknown'
+                            value: idol.astrological_sign ? idol.astrological_sign : 'Unknown',
+                            inline: true
+
                         },
                         {
                             name: "Blood Type",
-                            value: idol.blood
+                            value: idol.blood,
+                            inline: true
+
                         },
                         {
                             name: "Height",
-                            value: idol.height + "cm"
+                            value: idol.height + "cm",
+                            inline: true
+
                         },
                         {
                             name: "Measurements",
-                            value: idol.measurements ? idol.measurements : 'Unknown'
+                            value: idol.measurements ? idol.measurements : 'Unknown',
+                            inline: true
+
                         },
                         {
                             name: "Main Unit",
-                            value: idol.main_unit
+                            value: idol.main_unit,
+                            inline: true
+
                         },
                         {
                             name: "Sub Unit",
-                            value: idol.sub_unit
+                            value: idol.sub_unit,
+                            inline: true
+
                         },
                         {
                             name: "Birthday",
-                            value: idol.birthday
+                            value: idol.birthday,
+                            inline: true
+
                         }
                     ]
                 }).setThumbnail("https:" + idol.chibi_small)
