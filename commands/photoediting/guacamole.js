@@ -1,5 +1,9 @@
 const commando = require("discord.js-commando");
 const discord = require('discord.js');
+const fs  = require("fs");
+const request = require("request");
+const sharp = require('sharp');
+
 
 class guacamole extends commando.Command
 {
@@ -18,14 +22,25 @@ class guacamole extends commando.Command
                     type: "imageorstring"
                 }
             ]
-        })
+        });
     }
 
     async run(msg, args)
     {
-        msg.reply(args.guacInsert)
+    	if(!fs.existsSync("processing"))
+    	{
+    		await fs.mkdir("processing");
+     		console.log("Processing folder created");
+		}
+		
+		console.log(args.guacInsert);
+		await request(args.guacInsert).pipe(fs.createWriteStream("processing/input.png"));
+		await sharp("processing/input.png")
+			.resize(200)
+			.output("processing/output.png")
+
     }
 
 }
 
-module.exports = guacamole
+module.exports = guacamole;

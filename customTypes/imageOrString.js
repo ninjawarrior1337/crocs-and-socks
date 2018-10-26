@@ -16,7 +16,7 @@ class imageOrString extends commando.ArgumentType
                 return true
             }
             else
-                return false
+                return true
         }
         else
         {
