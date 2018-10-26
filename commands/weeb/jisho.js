@@ -29,8 +29,6 @@ class jisho extends commando.Command
     {
         var result = await jishoApi.searchForPhrase(args.query)
 
-        msg.channel.startTyping()
-
         var data = result.data[0]
 
         if(data === undefined)
@@ -50,8 +48,6 @@ class jisho extends commando.Command
         embed.addField("Meaning", data.senses[0].english_definitions[0])
 
         await msg.reply(embed)
-
-        msg.channel.stopTyping()
     }
 }
 

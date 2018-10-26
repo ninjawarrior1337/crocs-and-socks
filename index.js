@@ -16,9 +16,11 @@ client.registry
         ['weeb', "Weeb related commands"],
         ['fun', "Fun related commands"],
         ['testing', "Bot testing commands"],
-        ['utils', "Utilities related commands"]
+        ['utils', "Utilities related commands"],
+        ['photoediting', "Image editing related commands"]
     ])
     .registerDefaults()
+    .registerTypesIn(path.join(__dirname, "customTypes"))
     .registerCommandsIn(path.join(__dirname, "commands"));
 
 client.setProvider(
