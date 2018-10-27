@@ -34,6 +34,9 @@ client.on("ready", (c) => {
     client.user.setActivity('osu!');
 })
 
+client.on("error", (e) => console.error(e));
+client.on("warn", (e) => console.warn(e));
+
 
 
 process.on("SIGINT", () => {

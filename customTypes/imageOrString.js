@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando')
+const text2png = require('text2png')
 
 class imageOrString extends commando.ArgumentType
 {
@@ -40,4 +41,4 @@ class imageOrString extends commando.ArgumentType
     }
 }
 
-module.exports = imageOrString
+module.exports = imageOrString;

@@ -2,7 +2,7 @@ const commando = require("discord.js-commando");
 const discord = require('discord.js');
 const fs  = require("fs");
 const request = require("request");
-const sharp = require('sharp');
+const sharp = require('jimp');
 
 
 class guacamole extends commando.Command
