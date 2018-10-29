@@ -24,6 +24,7 @@ module.exports = class playAudio extends commando.Command
     }
 
     async run(msg, args) {
+        let dispatcher;
         const url = args.url;
         const author = msg.author;
 
@@ -37,11 +38,11 @@ module.exports = class playAudio extends commando.Command
             
             if(url.includes("youtube.com") || url.includes("youtu.be"))
             {
-                var dispatcher = this.client.connection.playStream(ytdl(url, { filter : 'audioonly' }));
+                dispatcher = this.client.connection.playStream(ytdl(url, { filter : 'audioonly' }));
             }
             else
             {
-                var dispatcher = this.client.connection.playStream(url);
+                dispatcher = this.client.connection.playStream(url);
             }
         }
         else
