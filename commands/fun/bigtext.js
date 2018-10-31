@@ -23,7 +23,7 @@ class bigtext extends commando.Command
 
     async run(msg, args)
     {
-        msg.reply({files: [text2png(args.text, {font: '80px Noto', backgroundColor: 'linen', padding: 20, color: 'teal'})]})
+        msg.reply({files: [text2png(args.text, {font: '80px Noto Sans', backgroundColor: 'linen', padding: 20, color: 'teal'})]})
     }
 }
 
