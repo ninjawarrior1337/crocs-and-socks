@@ -19,7 +19,7 @@ class about extends Command
         var embed = new RichEmbed()
             .setColor(0x3399ff)
             .setTitle("こんにちは (Hello), I am Tyler's discord bot...")
-            .setDescription("I am a very useful, [open source](http://github.com/ninjawarrior1337/crocs-and-socks), and very much a weeb bot.")
+            .setDescription("I am a very useful, [open source](http://github.com/ninjawarrior1337/crocs-and-socks), and very much a weeb bot.\nIm also powered by the best programming language, JavaScript!")
             .setURL("http://github.com/ninjawarrior1337/crocs-and-socks")
             .setThumbnail(this.client.user.avatarURL)
         msg.channel.send(embed)
