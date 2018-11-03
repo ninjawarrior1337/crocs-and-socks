@@ -74,3 +74,4 @@ typings/
 
 secrets.json
 processing/
+*.sqlite3
