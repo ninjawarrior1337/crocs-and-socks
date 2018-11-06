@@ -1,19 +1,17 @@
-const {Command} = require('discord.js-commando');
-const discord = require('discord.js');
+const {Command} = require("discord.js-commando")
 
-class miraizura extends Command
+class theworld extends Command
 {
     constructor(client)
     {
         super(client, {
-            description: "Plays mirai zura in the executer's current channel or the specified channel.",
-            name: "miraizura",
-            aliases: ["zura", "miraizura", "mirai"],
-            memberName: "miraizura",
+            description: "Plays theworld in the executer's current channel or the specified channel.",
+            name: "theworld",
+            memberName: "theworld",
             group: "weeb",
             args: [{
                 key: "voiceChannel",
-                prompt: "Which voice channel do you want to play zura! in?",
+                prompt: "Which voice channel do you want to play the world! in?",
                 type: "string",
                 default: "executer"
             }]
@@ -29,7 +27,7 @@ class miraizura extends Command
         else
             connection = await client.channels.get(args.voiceChannel.join());
 
-        let dispatcher = await connection.playFile("audio/mirai-zura.mp3", {passes: 5});
+        let dispatcher = await connection.playFile("audio/theworld.mp3", {passes: 5});
 
         dispatcher.on("end", () => {
             setTimeout(() => {
@@ -39,4 +37,4 @@ class miraizura extends Command
     }
 }
 
-module.exports = miraizura;
+module.exports = theworld

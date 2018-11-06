@@ -1,11 +1,32 @@
 const Commando = require('discord.js-commando');
 const path = require('path');
 const sqlite = require('sqlite');
-const secrets = require("./secrets.json")
+const fs = require('fs');
+const _ = require("underscore")
+if(!fs.existsSync("./secrets.json"))
+{
+    let template = {owner: "", token: ""};
+    fs.writeFileSync("./secrets.json", JSON.stringify(template, null, 2));
+    console.log("Looks like you're missing secrets.json, creating template then exiting.");
+    process.exit()
+}
+else
+{
+    let secrets = JSON.parse(fs.readFileSync("./secrets.json"));
+    _.forEach(_.values(secrets), function (e) {
+        if(e === "")
+        {
+            console.log("Please edit secrets.json and fill in the required information!")
+            process.exit()
+        }
+    })
 
+}
+
+let secrets = JSON.parse(fs.readFileSync("./secrets.json"));
 
 const client = new Commando.Client({
-    owner: "102939281470816256",
+    owner: secrets.owner,
     commandPrefix: "%",
     unknownCommandResponse: false,
 });
@@ -36,8 +57,6 @@ client.on("ready", (c) => {
 
 client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
-
-
 
 process.on("SIGINT", () => {
     client.destroy()

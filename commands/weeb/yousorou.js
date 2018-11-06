@@ -13,14 +13,20 @@ class yousorou extends Command
             args: [{
                 key: "voiceChannel",
                 prompt: "Which voice channel do you want to play yousorou! in?",
-                type: "channel"
+                type: "string",
+                default: "executer"
             }]
         })
     }
 
     async run(msg, args)
     {
-        let connection = await args.voiceChannel.join();
+        let connection;
+
+        if(args.voiceChannel === "executer")
+            connection = await msg.member.voiceChannel.join()
+        else
+            connection = await client.channels.get(args.voiceChannel.join());
 
         let dispatcher = await connection.playFile("audio/yousorou.mp3", {passes: 5});
 
