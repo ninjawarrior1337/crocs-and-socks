@@ -30,20 +30,27 @@ module.exports = class playAudio extends commando.Command
 
         if (msg.member.voiceChannel)
         {
-            try {
+            try
+            {
                 this.client.connection = await msg.member.voiceChannel.join()
-            } catch (error) {
+            }
+            catch (error)
+            {
                 
             }
+
+            let volume = this.client.provider.get(msg.guild, "volume", .5);
             
             if(url.includes("youtube.com") || url.includes("youtu.be"))
             {
                 dispatcher = this.client.connection.playStream(ytdl(url, { filter : 'audioonly' }));
+
             }
             else
             {
                 dispatcher = this.client.connection.playStream(url);
             }
+            dispatcher.setVolumeLogarithmic(volume)
         }
         else
         {

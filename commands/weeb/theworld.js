@@ -23,17 +23,17 @@ class theworld extends Command
         let connection;
 
         if(args.voiceChannel === "executer")
-            connection = await msg.member.voiceChannel.join()
+            if(msg.member !== null)
+                connection = await msg.member.voiceChannel.join();
+            else
+            {
+                msg.channel.send({files: ["audio/theworld.mp3"]});
+                return
+            }
         else
-            connection = await client.channels.get(args.voiceChannel.join());
+            connection = await this.client.channels.get(args.voiceChannel).join();
 
         let dispatcher = await connection.playFile("audio/theworld.mp3", {passes: 5});
-
-        dispatcher.on("end", () => {
-            setTimeout(() => {
-                connection.disconnect()
-            }, 500)
-        })
     }
 }
 

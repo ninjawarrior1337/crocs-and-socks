@@ -17,6 +17,13 @@ module.exports = class playonesecond extends commando.Command
                     label: 'url',
                     prompt: "What URL would you like to play",
                     type: "string",
+                },
+                {
+                    key: 'channel',
+                    label: 'channel',
+                    prompt: "What channel would you like to play this in?",
+                    type: "string",
+                    default: "executer"
                 }
             ],
             guildOnly: true
@@ -32,7 +39,10 @@ module.exports = class playonesecond extends commando.Command
         {
             try
             {
-                this.client.connection = await msg.member.voiceChannel.join()
+                if(args.channel === "executer")
+                    this.client.connection = await msg.member.voiceChannel.join()
+                else
+                    this.client.connection = await this.client.channels.get(args.channel).join()
             } catch (error) {
 
             }

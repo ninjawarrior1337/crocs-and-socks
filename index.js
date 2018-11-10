@@ -38,7 +38,8 @@ client.registry
         ['fun', "Fun related commands"],
         ['testing', "Bot testing commands"],
         ['utils', "Utilities related commands"],
-        ['photoediting', "Image editing related commands"]
+        ['photoediting', "Image editing related commands"],
+        ['settings', "Settings Related Commands"]
     ])
     .registerDefaults()
     .registerTypesIn(path.join(__dirname, "customTypes"))

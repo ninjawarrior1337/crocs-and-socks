@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+const _ = require('lodash')
 
 module.exports = class audioVolume extends commando.Command
 {
@@ -23,8 +24,18 @@ module.exports = class audioVolume extends commando.Command
 
     async run(msg, args)
     {
-        const connection = msg.guild.voiceConnection.dispatcher;
-        await connection.setVolumeLogarithmic(args.vol/100);
+        if(this.client.provider.get(msg.guild, "earrape", true))
+            await this.client.provider.set(msg.guild, "volume", args.vol/100);
+        else
+            await this.client.provider.set(msg.guild, "volume", _.clamp(args.vol, 0, 200/100));
+
+        if(msg.guild.voiceConnection !== null)
+        {
+            let connection = msg.guild.voiceConnection.dispatcher;
+            await connection.setVolumeLogarithmic(this.client.provider.get(msg.guild, "volume"));
+        }
+
+        msg.reply(`Volume set to ${this.client.provider.get(msg.guild, "volume") * 100 + "%"}`)
     }
 
 }

@@ -27,15 +27,9 @@ class miraizura extends Command
         if(args.voiceChannel === "executer")
             connection = await msg.member.voiceChannel.join()
         else
-            connection = await client.channels.get(args.voiceChannel.join());
+            connection = await this.client.channels.get(args.voiceChannel).join();
 
         let dispatcher = await connection.playFile("audio/mirai-zura.mp3", {passes: 5});
-
-        dispatcher.on("end", () => {
-            setTimeout(() => {
-                connection.disconnect()
-            }, 500)
-        })
     }
 }
 
