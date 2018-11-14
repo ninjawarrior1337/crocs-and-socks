@@ -1,4 +1,5 @@
 const jimp = require("jimp");
+const text2png = require("text2png")
 
 jimp.read("../overlay-imgs/rumble.png").then(rumble => {
     jimp.read("input.png").then(input =>
