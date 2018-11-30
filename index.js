@@ -59,6 +59,23 @@ client.on("ready", (c) => {
 client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
 
+//Anime {} Listener
+client.on("message", (msg) => {
+    const animeRegex = new RegExp('\{(.+?)\}', 'g')
+
+    if (msg.author === client.user)
+        return;
+
+    console.log(msg.content.match(animeRegex))
+})
+
+// client.on("message", (msg) => 
+// {
+//     _.forEach(msg.attachments.array(), (val, index) => {
+//         console.log(val.url)
+//     })   
+// })
+
 process.on("SIGINT", () => {
     client.destroy()
 })

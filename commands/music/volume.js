@@ -27,7 +27,7 @@ module.exports = class audioVolume extends commando.Command
         if(this.client.provider.get(msg.guild, "earrape", true))
             await this.client.provider.set(msg.guild, "volume", args.vol/100);
         else
-            await this.client.provider.set(msg.guild, "volume", _.clamp(args.vol, 0, 200/100));
+            await this.client.provider.set(msg.guild, "volume", _.clamp(args.vol/100, 0, 200/100));
 
         if(msg.guild.voiceConnection !== null)
         {
