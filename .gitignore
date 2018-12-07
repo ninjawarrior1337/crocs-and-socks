@@ -75,3 +75,4 @@ typings/
 secrets.json
 processing/
 *.sqlite3
+imgs/padoru/lastChosen.txt

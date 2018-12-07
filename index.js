@@ -29,6 +29,7 @@ const client = new Commando.Client({
     owner: secrets.owner,
     commandPrefix: "%",
     unknownCommandResponse: false,
+    nonCommandEditable: true
 });
 
 client.registry
