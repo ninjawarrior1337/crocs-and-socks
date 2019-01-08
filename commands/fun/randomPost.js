@@ -1,5 +1,6 @@
 const commando = require("discord.js-commando")
 const randomSubPost = require("../../helpers/randomSubPost")
+const _ = require('lodash')
 
 module.exports = class randomPost extends commando.Command
 {
@@ -17,10 +18,18 @@ module.exports = class randomPost extends commando.Command
                 "type": "string"
             }]
         })
+
+        this.bannedKeywords = [
+            "hentai",
+            "juul"
+        ]
     }
 
     async run(msg, args)
     {
-        msg.reply(`Here is a post from r/${args.subreddit} \n ${await randomSubPost(args.subreddit)}`)
+        if(_.includes(this.bannedKeywords, args.subreddit))
+            msg.reply("Sorry, none of that here please.")
+        else
+            msg.reply(`Here is a post from r/${args.subreddit} \n ${await randomSubPost(args.subreddit)}`)
     }
 }

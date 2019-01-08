@@ -72,7 +72,7 @@ typings/
 # Serverless directories
 .serverless
 
-secrets.json
+secrets.*
 processing/
 *.sqlite3
 imgs/padoru/lastChosen.txt

@@ -3,8 +3,6 @@ const fs = require("fs")
 const path = require('path')
 const {Message} = require('discord.js')
 
-var files = fs.readdirSync(path.join(__dirname, '..', "..", "imgs", "padoru"))
-
 module.exports = class padoru extends Command
 {
     constructor(client)
@@ -21,6 +19,7 @@ module.exports = class padoru extends Command
 
     randomImg()
     {
+		var files = fs.readdirSync(path.join(__dirname, '..', "..", "imgs", "padoru"))
         let imgDirectory = path.join(__dirname, '..', "..", "imgs", "padoru")
         let chosenFile = files[Math.floor(Math.random() * files.length)]
 
