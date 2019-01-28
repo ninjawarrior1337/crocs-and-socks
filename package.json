@@ -28,7 +28,7 @@
     "one-liner-joke": "^1.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
-    "sqlite": "^3.0.0",
+    "sqlite": "^3.0.1",
     "stream-to": "^2.0.0",
     "text2png": "^2.1.0",
     "underscore": "^1.9.1",
