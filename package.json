@@ -13,7 +13,7 @@
     "discord.js-commando": "^0.10.0",
     "erlpack": "^0.1.2",
     "fetch-subreddit": "^3.0.0",
-    "fuse.js": "^3.3.0",
+    "fuse.js": "^3.4.0",
     "hepburn": "^1.1.1",
     "image-downloader": "^3.4.2",
     "jimp": "^0.6.0",
