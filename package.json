@@ -27,7 +27,7 @@
     "node-opus": "^0.3.1",
     "one-liner-joke": "^1.2.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
+    "request-promise-native": "^1.0.7",
     "sqlite": "^3.0.3",
     "stream-to": "^2.0.0",
     "text2png": "^2.1.0",
