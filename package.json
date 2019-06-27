@@ -22,7 +22,7 @@
     "jimp": "^0.6.0",
     "lodash": "^4.17.11",
     "morjs": "^1.1.0",
-    "music-metadata": "^3.5.3",
+    "music-metadata": "^4.1.2",
     "nhentai-api": "^2.0.4",
     "node-opus": "^0.3.1",
     "one-liner-joke": "^1.2.0",
