@@ -76,3 +76,4 @@ secrets.*
 processing/
 *.sqlite3
 imgs/padoru/lastChosen.txt
+dist/
