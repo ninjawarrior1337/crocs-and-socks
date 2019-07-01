@@ -72,8 +72,8 @@ animeme | Sends a random recent animeme from [r/animemes](http://reddit.com/r/an
 ## Voice Channel Sound Effects
 These all play some sound effect in the executer's active VC or a specified VC.
 Command Name | What it do
----|---
+-------- | --------
 theworld/dio | ZA WARUDO
-yousoro| o7
-chinese|Bruh
-zura|未来ずら (Congratulations Hanamaru on 4th Center)
+yousoro | o7
+chinese |Bruh
+zura | 未来ずら (Congratulations Hanamaru on 4th Center)
