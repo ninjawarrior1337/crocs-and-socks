@@ -24,26 +24,26 @@ export default class patrick extends Command
     async exec(msg, args) {
         if (args.neckLength < 0)
         {
-            await msg.channel.sendFile("imgs/patrick/0r.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/0r.jpg")
             for(let i=0; i>args.neckLength; i--)
             {
-                await msg.channel.sendFile("imgs/patrick/1r.jpg")
+                await msg.channel.sendFile("assets/imgs/patrick/1r.jpg")
             }
-            await msg.channel.sendFile("imgs/patrick/2r.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/2r.jpg")
         }
         else if(args.neckLength > 0)
         {
-            await msg.channel.sendFile("imgs/patrick/0.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/0.jpg")
             for(let i=0; i<args.neckLength; i++)
             {
-                await msg.channel.sendFile("imgs/patrick/1.jpg")
+                await msg.channel.sendFile("assets/imgs/patrick/1.jpg")
             }
-            await msg.channel.sendFile("imgs/patrick/2.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/2.jpg")
         }
         else
         {
-            await msg.channel.sendFile("imgs/patrick/0.jpg")
-            await msg.channel.sendFile("imgs/patrick/2.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/0.jpg")
+            await msg.channel.sendFile("assets/imgs/patrick/2.jpg")
         }
     }
 }

@@ -29,7 +29,7 @@ export default class earRape extends Command
         {
             if(args.earrape === "off")
             {
-                this.client.provider.set(msg.guild, "earrape", false);
+                this.client.settings.set(msg.guild, "earrape", false);
                 msg.reply("Ear rape on this server has been set to **False**")
             }
             else

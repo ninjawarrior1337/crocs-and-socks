@@ -14,6 +14,7 @@ export default class jisho extends Command
             memberName: "jisho",
             name: "jisho",
             group: "weeb",
+            aliases: ["jisho"],
             args:
                 [
                     {

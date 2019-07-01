@@ -1,5 +1,5 @@
 import discord from 'discord.js'
-import {AkairoClient} from 'discord-akairo'
+import {AkairoClient, SQLiteProvider} from 'discord-akairo'
 import * as path from 'path'
 import sqlite from 'sqlite'
 import * as fs from 'fs'
@@ -27,6 +27,21 @@ if (!fs.existsSync("./secrets.yaml")) {
 }
 
 let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.yaml")));
+
+// class CustomClient extends AkairoClient
+// {
+//     constructor(AkairoOptions, ClientOptions) {
+//       super(AkairoOptions, ClientOptions)
+//       this.settings = new SQLiteProvider(sqlite.open('./../db.sqlite').then(), 'crocsandsocks', {
+//         idColumn: 'guild_id',
+//         dataColumn: 'settings'
+//       })
+//     }
+
+//     login(token) {
+//       return this.settings.init().then(() => super.login(token))
+//     }
+// }
 
 const client = new AkairoClient(
   {

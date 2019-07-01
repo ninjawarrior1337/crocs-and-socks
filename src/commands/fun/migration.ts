@@ -21,7 +21,7 @@ export default class migration extends Command
     {
         for(let x of msg.member.voiceChannel.members)
         {
-            x[1].setVoiceChannel(args.toVc)
+            await x[1].setVoiceChannel(args.toVc)
         }
     }
 }
