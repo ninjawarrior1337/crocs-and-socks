@@ -7,26 +7,28 @@ import * as _ from 'underscore'
 import imageOrUrl from './customTypes/imageOrString';
 const yaml = require('js-yaml')
 
-if (!fs.existsSync("./secrets.yaml")) {
-  let template = { owner: "", token: "" };
-  fs.writeFileSync("./secrets.yaml", yaml.safeDump(template, {indent: 2}));
-  console.log(
-    "Looks like you're missing secrets.yaml, creating template then exiting."
-  );
-  process.exit();
-} else {
-  let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.yaml")));
-  _.forEach(_.values(secrets), function(e) {
-    if (e === "") {
-      console.log(
-        "Please edit secrets.yaml and fill in the required information!"
-      );
-      process.exit();
-    }
-  });
-}
+require('dotenv').config()
 
-let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.yaml")));
+// if (!fs.existsSync("./secrets.yaml")) {
+//   let template = { owner: "", token: "" };
+//   fs.writeFileSync("./secrets.yaml", yaml.safeDump(template, {indent: 2}));
+//   console.log(
+//     "Looks like you're missing secrets.yaml, creating template then exiting."
+//   );
+//   process.exit();
+// } else {
+//   let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.yaml")));
+//   _.forEach(_.values(secrets), function(e) {
+//     if (e === "") {
+//       console.log(
+//         "Please edit secrets.yaml and fill in the required information!"
+//       );
+//       process.exit();
+//     }
+//   });
+// }
+
+// let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.yaml")));
 
 // class CustomClient extends AkairoClient
 // {
@@ -45,7 +47,7 @@ let secrets = yaml.safeLoad(fs.readFileSync(path.join(__dirname, "..", "secrets.
 
 const client = new AkairoClient(
   {
-    ownerID: secrets.owner,
+    ownerID: process.env.OWNER,
     prefix: "?",
     commandUtil: true,
     handleEdits: true,
@@ -61,7 +63,7 @@ client.build()
 
 client.commandHandler.resolver.addType("imgorstr", imageOrUrl)
 
-client.login(secrets.token);
+client.login(process.env.TOKEN);
 
 client.on("ready", () => {
   console.log(`Sucessfully logged in as ${client.user.username}`);

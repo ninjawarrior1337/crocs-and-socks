@@ -2,23 +2,23 @@
 
 The Discord Bot of The Future (未来ずら！) (Mirai Zura!)
 
-**Docker support will be added shortly**
-
 # DISCLAIMER
 I AM **NOT RESPONSIBLE IF THE BOT SENDS NSFW PICS IN A CHAT WITH THE USE OF THE REDDIT OR ANY OTHER COMMAND**, YOU HAVE BEEN WARNED.
 
 # How to Install (Not Docker)
+
+First:
 ```bash
 ~$ git clone https://github.com/ninjawarrior1337/crocs-and-socks.git
 ~$ npm install
 ```
 
-After cloning and installing dependencies, create a file at the root of the downloaded project and create a file called ```secrets.yaml```
+After cloning and installing dependencies, create a file at the root of the downloaded project and create a file called ```.env```
 In that file insert:
 
-```yaml
-token: "<token here>"
-owner: "<owner id>"
+```dotenv
+TOKEN=<token here>
+OWNER=<owner id>
 ```
 **Owner ID can be found by enabling developer mode in Discord and right clicking on your self in a server and then clicking on Copy ID**
 
@@ -43,8 +43,32 @@ Sidenote: Feel free to use [PM2](https://pm2.io/runtime/) as a means to get it t
 ~$ pm2 start dist/index.js
 ```
 
+# How to install (Docker)
+Fortunately, this project is completely stateless (this probably won't hold true for long). For now, you can just deploy using.
+
+```bash
+~$ docker run -d -e "OWNER=<owner id>" -e "TOKEN=<discord token>" --restart always treelar/crocks-and-socks
+```
+
+## Compose
+Copy this template into docker-compose.yml
+```yml
+version: "3"
+services:
+  bot:
+    environment:
+      - OWNER=<owner id>
+      - TOKEN=<token>
+    restart: always
+    image: treelar/crocks-and-socks
+```
+Finally run:
+```bash
+~$ docker-compose up -d
+```
+
 # About
-This is a bot created using [Discord.JS](http://discord.js.org) and [Discord Commando](https://www.npmjs.com/package/discord.js-commando) as the underlying bot framework.
+This is a bot created using [Discord.JS](http://discord.js.org) and [Discord Akairo](https://www.npmjs.com/package/discord-akairo) as the underlying bot framework.
 
 # Commands
 ## Main Commands

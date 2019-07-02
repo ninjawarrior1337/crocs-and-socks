@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  bot:
+    build: ./
+    image: bot:latest
+    env_file: .env
+    restart: always
