@@ -18,13 +18,16 @@ export default class translate extends commando.Command
                     type: "string",
                     prompt: {
                         start: "Please input the string to be translated"
-                    }
+                    },
+                    match: "rest"
                 },
                 {
                     id: "outputLang",
                     type: "string",
                     prompt: {start: "Please enter the language you want to translate to", optional: true},
-                    default: "en"
+                    default: "en",
+                    prefix: "lang=",
+                    match: "prefix"
                 }
             ]
         })

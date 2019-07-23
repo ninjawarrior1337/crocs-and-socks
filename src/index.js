@@ -5,6 +5,8 @@ import sqlite from 'sqlite'
 import * as fs from 'fs'
 import * as _ from 'underscore'
 import imageOrUrl from './customTypes/imageOrString';
+import soundEffect from './util/soundEffect';
+import ytdl from 'ytdl-core'
 const yaml = require('js-yaml')
 
 require('dotenv').config()
@@ -63,11 +65,19 @@ client.build()
 
 client.commandHandler.resolver.addType("imgorstr", imageOrUrl)
 
+//Each soundeffect
+// for (let file of fs.readdirSync(path.join(__dirname, "..", "assets", "audio")))
+// {
+//   let {name, base} = path.parse(file)
+//   console.log({name, base})
+//   client.commandHandler.load(new soundEffect(name, [name], base))
+// }
+
 client.login(process.env.TOKEN);
 
 client.on("ready", () => {
   console.log(`Sucessfully logged in as ${client.user.username}`);
-  client.user.setActivity("osu!");
+  client.user.setActivity("Aqours Songs", {type: "LISTENING"});
 });
 
 client.on("error", e => console.error(e));
@@ -108,10 +118,17 @@ client.on("messageReactionAdd", (messageReaction, user) => {
 
 //   }
 
-//   if(oldMember.voiceChannel === undefined && oldMember.user.id === "456693764367450112")
+//   if(oldMember.voiceChannel === undefined && oldMember.user.id === "212335473887019008")
 //   {
 //     let connection = await newMember.voiceChannel.join()
-//     connection.playStream(ytdl("https://www.youtube.com/watch?v=UmzGs0YMS_Q", { filter : 'audioonly' }));
+//     let stream = connection.playStream(ytdl("https://www.youtube.com/watch?v=M1wLtAXDgqg", { filter : 'audioonly' }));
+//     stream.setVolumeDecibels(120)
+//     stream.on("end", () => {
+//       setTimeout(() => {
+//         connection.playStream(ytdl("https://www.youtube.com/watch?v=vTIIMJ9tUc8", {filter: "audioonly"}))
+//         stream.setVolumeDecibels(120)
+//       }, 5000)
+//     })
 //   }
 // })
 

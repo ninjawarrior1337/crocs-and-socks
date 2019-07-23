@@ -33,7 +33,7 @@ module.exports = class audioVolume extends Command
             await connection.setVolumeLogarithmic(toVol);
         }
 
-        msg.reply(`Volume set to ${toVol} * 100 + "%"}`)
+        msg.reply(`Volume set to ${args.vol}%`)
     }
 
 }

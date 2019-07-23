@@ -12,7 +12,8 @@ export default class bigtext extends Command
                 {
                     id: "text",
                     prompt: "What text do you want?",
-                    type: "string"
+                    type: "string",
+                    match: "rest"
                 }
             ]
         });
