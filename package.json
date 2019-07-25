@@ -26,7 +26,7 @@
     "image-downloader": "^3.4.2",
     "jimp": "^0.6.0",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "morjs": "^1.1.0",
     "music-metadata": "^3.5.3",
     "nhentai-api": "^2.0.4",
