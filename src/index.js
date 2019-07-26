@@ -50,7 +50,7 @@ require('dotenv').config()
 const client = new AkairoClient(
   {
     ownerID: process.env.OWNER,
-    prefix: "?",
+    prefix: process.env.PREFIX ? process.env.PREFIX : "?",
     commandUtil: true,
     handleEdits: true,
     commandDirectory: path.join(__dirname, "commands"),

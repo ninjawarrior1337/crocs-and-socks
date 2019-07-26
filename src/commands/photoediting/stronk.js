@@ -16,12 +16,15 @@ class stronk extends commando.Command
                 {
                     id: "text",
                     prompt: "What text do you want?",
-                    type: "string"
+                    type: "string",
+                    match: "rest"
                 },
                 {
                     id: "color",
                     prompt: "What do you want the background color to be?",
                     type: "string",
+                    match: "prefix",
+                    prefix: "color=",
                     validate: (val, msg, arg) => {
                         return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(val)
                     },
@@ -33,7 +36,7 @@ class stronk extends commando.Command
 
     async exec(msg, args)
     {
-        msg.reply({files: [await stronkLib(args.text, args.color)]})
+        msg.reply({files: [await stronkLib.doEdit(args.text, args.color)]})
     }
 }
 
