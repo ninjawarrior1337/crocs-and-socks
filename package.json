@@ -37,7 +37,7 @@
     "sqlite": "^3.0.3",
     "stream-to": "^2.0.0",
     "text2png": "^2.1.0",
-    "typescript": "^3.5.2",
+    "typescript": "^3.6.2",
     "underscore": "^1.9.1",
     "unofficial-jisho-api": "^2.0.5",
     "uws": "^100.0.1",
