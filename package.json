@@ -30,7 +30,7 @@
     "morjs": "^1.1.0",
     "music-metadata": "^4.4.0",
     "nhentai-api": "^2.0.4",
-    "node-opus": "^0.3.1",
+    "node-opus": "^0.3.2",
     "one-liner-joke": "^1.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
