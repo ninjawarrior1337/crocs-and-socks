@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/node": "^7.4.5",
-    "@k3rn31p4nic/google-translate-api": "^1.0.5",
+    "@k3rn31p4nic/google-translate-api": "^1.1.0",
     "@metadelta/core": "^1.1.2",
     "@metadelta/solver": "^2.0.1",
     "@types/js-yaml": "^3.12.1",
