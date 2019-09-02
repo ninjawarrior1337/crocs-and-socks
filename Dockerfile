@@ -18,6 +18,12 @@ RUN apk add --no-cache ffmpeg cairo jpeg pango giflib font-noto
 
 COPY ./assets ./assets
 
+ARG COMMIT_HASH=UNKNOWN
+ENV COMMIT_HASH $COMMIT_HASH
+
+ARG BUILD_DATE=UNKNOWN
+ENV BUILD_DATE $BUILD_DATE
+
 COPY . .
 
 RUN ["npm", "run", "build"]
