@@ -9,7 +9,7 @@
     "@metadelta/core": "^1.1.2",
     "@metadelta/solver": "^2.0.1",
     "@types/js-yaml": "^3.12.1",
-    "@types/request": "^2.48.1",
+    "@types/request": "^2.48.2",
     "@types/underscore": "^1.9.2",
     "babel-plugin-idx": "^2.4.0",
     "bufferutil": "^4.0.1",
