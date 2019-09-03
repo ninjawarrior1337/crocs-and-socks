@@ -6,7 +6,7 @@ RUN apk add --no-cache build-base g++ gcc cairo-dev jpeg-dev pango-dev giflib-de
 
 COPY package*.json ./
 
-RUN npm ci
+RUN yarn
 
 FROM node:lts-alpine
 
