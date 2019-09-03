@@ -6,3 +6,4 @@ script:
   - docker tag treelar/crocks-and-socks:$TRAVIS_COMMIT treelar/crocks-and-socks:latest
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push treelar/crocks-and-socks:$TRAVIS_COMMIT
+  - docker push treelar/crocks-and-socks:latest
