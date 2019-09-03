@@ -2,7 +2,7 @@ services:
   - docker
 
 script:
-  - docker build --build-arg COMMIT_HASH=$TRAVIS_COMMIT --build-arg BUILD_DATE=$(echo date) --build-arg COMMIT_MESSAGE=$TRAVIS_COMMIT_MESSAGE -f Dockerfile -t treelar/crocks-and-socks:latest .
+  - docker build --build-arg COMMIT_HASH=$TRAVIS_COMMIT --build-arg BUILD_DATE=$(echo date) --build-arg COMMIT_MESSAGE=$TRAVIS_COMMIT_MESSAGE -t treelar/crocks-and-socks:latest .
   - docker tag treelar/crocks-and-socks:latest treelar/crocks-and-socks:$TRAVIS_COMMIT
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push treelar/crocks-and-socks:$TRAVIS_COMMIT
