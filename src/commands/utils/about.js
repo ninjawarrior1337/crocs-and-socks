@@ -23,6 +23,7 @@ class about extends Command
             .setURL("http://github.com/ninjawarrior1337/crocs-and-socks")
             .setThumbnail(this.client.user.avatarURL)
             .addField("Commit Hash", process.env.COMMIT_HASH ? process.env.COMMIT_HASH : "DEV")
+            .addField("Commit Message", process.env.COMMIT_MESSAGE ? process.env.COMMIT_MESSAGE : "DEV")
             .addField("Build Date", process.env.BUILD_DATE ? process.env.BUILD_DATE : "DEV")
         msg.channel.send(embed)
     }
