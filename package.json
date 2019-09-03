@@ -41,7 +41,7 @@
     "text2png": "^2.1.0",
     "typescript": "^3.5.2",
     "underscore": "^1.9.1",
-    "unofficial-jisho-api": "^1.3.0",
+    "unofficial-jisho-api": "^2.0.5",
     "uws": "^100.0.1",
     "ytdl-core": "^0.29.1"
   },
