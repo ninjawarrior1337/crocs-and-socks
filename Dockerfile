@@ -33,4 +33,6 @@ ENV BUILD_DATE $BUILD_DATE
 
 RUN ["npm", "run", "build"]
 
+RUN ["mkdir", "data"]
+
 CMD ["node", "dist/"]
