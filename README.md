@@ -40,14 +40,17 @@ Done! You're up and running!
 Sidenote: Feel free to use [PM2](https://pm2.io/runtime/) as a means to get it to autostart on your sever
 ```bash
 ~$ npm install -g pm2
-~$ pm2 start dist/index.js
+~$ pm2 start dist/bot.js
 ```
 
 # How to install (Docker)
-Fortunately, this project is completely stateless (this probably won't hold true for long). For now, you can just deploy using.
+This bot has a data directory at ```/usr/share/app/data```, please mount it if you want server specific options to persist across recreation of the container.
 
+The compose file and the following command will mount the data directory at the current directory in a folder called config. Feel free to change this.
+
+## Command
 ```bash
-~$ docker run -d -e "OWNER=<owner id>" -e "TOKEN=<discord token>" --restart always treelar/crocks-and-socks
+~$ docker run -d -e "OWNER=<owner id>" -e "TOKEN=<discord token>" -v $PWD/config:/usr/share/app/data --restart always treelar/crocks-and-socks
 ```
 
 ## Compose
@@ -59,6 +62,8 @@ services:
     environment:
       - OWNER=<owner id>
       - TOKEN=<token>
+    volumes:
+      - $PWD/config:/usr/share/app/data
     restart: always
     image: treelar/crocks-and-socks
 ```
@@ -68,7 +73,7 @@ Finally run:
 ```
 
 # About
-This is a bot created using [Discord.JS](http://discord.js.org) and [Discord Akairo](https://www.npmjs.com/package/discord-akairo) as the underlying bot framework.
+This is a bot created using [Discord.JS](http://discord.js.org) and [Discord Akairo](https://www.npmjs.com/package/discord-akairo) as the underlying bot framework. I started this as a way to practice Javascript, now idk why I'm still maintaining this.
 
 # Commands
 ## Main Commands
@@ -102,3 +107,19 @@ theworld/dio | ZA WARUDO
 yousoro | o7
 chinese |Bruh
 zura | 未来ずら (Congratulations Hanamaru on 4th Center)
+
+# Options
+Options can be set by using
+```
+?set <option name> <value / get>
+```
+
+**Things to note**
+- If value is set to get, the bot will return the current value of the option
+- If the value is inputed as ```on``` or ```off```, these are two reserved words as they will set the option to either true, or false respectively. **Specifying the value as true or false will NOT work**
+- The list of current options are below.
+- More will be added in the future.
+
+Option | What It Do
+-------- | --------
+dio | Turns the auto reply dio picture on or off

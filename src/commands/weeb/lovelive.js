@@ -9,7 +9,7 @@ export default class lovelive extends Command
         super("lovelive", {
             description: "Gets a random love live",
             name: "lovelive",
-            aliases: ["llsip", "ll", "llsif"],
+            aliases: ["llsip", "ll", "llsif", "lovelive"],
             group: "weeb",
             memberName: "lovelive"
         })

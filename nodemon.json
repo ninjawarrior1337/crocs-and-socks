@@ -1,0 +1,9 @@
+{
+  "execMap": {
+    "js": "npx babel-node --extensions .ts,.js"
+  },
+  "watch": [
+    "src/"
+  ],
+  "ext": "*"
+}

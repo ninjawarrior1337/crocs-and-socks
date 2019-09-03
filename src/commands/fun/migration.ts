@@ -19,7 +19,7 @@ export default class migration extends Command
 
     async exec(msg: Message, args)
     {
-        for(let x of msg.member.voiceChannel.members)
+        for await (let x of msg.member.voiceChannel.members)
         {
             await x[1].setVoiceChannel(args.toVc)
         }

@@ -1,5 +1,13 @@
-node_modules/
 dist/
 processing/
 testing/
+data/
 .env
+
+node_modules
+.dockerignore
+Dockerfile
+npm-debug.log
+.git
+.hg
+.svn

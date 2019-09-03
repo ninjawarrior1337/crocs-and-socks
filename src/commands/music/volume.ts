@@ -1,8 +1,9 @@
 import {Command} from  "discord-akairo"
 import {Message} from 'discord.js'
+import HanamaruCommand from "../../structures/Command";
 const _ = require('lodash')
 
-module.exports = class audioVolume extends Command
+export default class audioVolume extends HanamaruCommand
 {
     constructor ()
     {
@@ -20,14 +21,14 @@ module.exports = class audioVolume extends Command
 
     async exec(msg: Message, args)
     {
-        // if(this.client.provider.get(msg.guild, "earrape", true))
-        //     await this.client.provider.set(msg.guild, "volume", args.vol/100);
-        // else
-        //     await this.client.provider.set(msg.guild, "volume", _.clamp(args.vol/100, 0, 200/100));
+        if(this.client.provider.get(msg.guild.id, "earrape", true))
+            await this.client.provider.set(msg.guild.id, "volume", args.vol/100);
+        else
+            await this.client.provider.set(msg.guild.id, "volume", _.clamp(args.vol/100, 0, 200/100));
 
         let toVol = args.vol/100
 
-        if(msg.guild.voiceConnection !== null)
+        if(msg.member.voiceChannel !== null)
         {
             let connection = msg.guild.voiceConnection.dispatcher;
             await connection.setVolumeLogarithmic(toVol);

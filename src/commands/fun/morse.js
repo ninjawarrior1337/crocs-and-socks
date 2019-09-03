@@ -21,11 +21,11 @@ export default class morse extends commando.Command
     {
         if(args.inputString.match(/[a-z]/gm))
         {
-            msg.reply(morseCode.encode(args.inputString, {mode: 'simple'}))
+            await msg.reply(morseCode.encode(args.inputString, {mode: 'simple'}))
         }
         else
         {
-            msg.reply(morseCode.decode(args.inputString, {mode: 'simple'}))
+            await msg.reply(morseCode.decode(args.inputString, {mode: 'simple'}))
         }
     }
 }

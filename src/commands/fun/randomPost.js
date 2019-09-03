@@ -1,5 +1,5 @@
 const commando = require("discord-akairo")
-const randomSubPost = require("../../helpers/randomSubPost")
+import getRandomPost from "./../../helpers/randomSubPost"
 const _ = require('lodash')
 
 export default class randomPost extends commando.Command
@@ -14,8 +14,9 @@ export default class randomPost extends commando.Command
             "group": "fun",
             "args": [{
                 "id": "subreddit",
-                "prompt": "What subreddit?",
-                "type": "string"
+                "prompt": "Which subreddit",
+                "type": "string",
+                "match": "rest"
             }]
         })
 
@@ -30,6 +31,6 @@ export default class randomPost extends commando.Command
         if(_.includes(this.bannedKeywords, args.subreddit))
             msg.reply("Sorry, none of that here please.")
         else
-            msg.reply(`Here is a post from r/${args.subreddit} \n ${await randomSubPost(args.subreddit)}`)
+            msg.reply(`Here is a post from r/${args.subreddit} \n ${await getRandomPost(args.subreddit)}`)
     }
 }

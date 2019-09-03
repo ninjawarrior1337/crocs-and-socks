@@ -1,6 +1,7 @@
 import { AkairoModule, Command } from "discord-akairo";
+import HanamaruCommand from "../../structures/Command";
 
-export default class earRape extends Command
+export default class earRape extends HanamaruCommand
 {
     constructor() {
         super("earrape", {
@@ -19,23 +20,23 @@ export default class earRape extends Command
 
     async exec(msg, args)
     {
-        let isEarRapeEnabled = this.client.provider.get(msg.guild, "earrape", true)
+        let isEarRapeEnabled = this.client.provider.get(msg.guild.id, "earrape", true)
 
         if(args.earrape === "get")
         {
-            msg.reply(`Ear rape is ${isEarRapeEnabled ? "enabled" : "disabled"} on this server!`)
+            await msg.reply(`Ear rape is ${isEarRapeEnabled ? "enabled" : "disabled"} on this server!`)
         }
         else
         {
             if(args.earrape === "off")
             {
-                this.client.settings.set(msg.guild, "earrape", false);
-                msg.reply("Ear rape on this server has been set to **False**")
+                this.client.provider.set(msg.guild.id, "earrape", false);
+                await msg.reply("Ear rape on this server has been set to **False**")
             }
             else
             {
-                this.client.provider.set(msg.guild, "earrape", true);
-                msg.reply("Ear rape on this server has been set to **True**")
+                this.client.provider.set(msg.guild.id, "earrape", true);
+                await msg.reply("Ear rape on this server has been set to **True**")
             }
         }
     }

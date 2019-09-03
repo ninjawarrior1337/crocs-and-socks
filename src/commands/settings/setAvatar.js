@@ -23,7 +23,7 @@ class setAvatar extends commando.Command
     async exec(msg, args)
     {
         await this.client.user.setAvatar(args.url)
-        msg.reply("Avatar Changed!")
+        await msg.reply("Avatar Changed!")
     }
 }
 

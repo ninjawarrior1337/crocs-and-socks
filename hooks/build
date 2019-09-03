@@ -1,2 +1,0 @@
-#!/bin/bash
-docker build --build-arg COMMIT_HASH=$SOURCE_COMMIT --build-arg BUILD_DATE=$(echo date) -f $DOCKERFILE_PATH -t $IMAGE_NAME .

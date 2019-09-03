@@ -1,5 +1,5 @@
 const commando = require('discord-akairo');
-const { RichEmbed } = require('discord.js');
+const { RichEmbed, Message } = require('discord.js');
 
 export default class NitroCommand extends commando.Command
 {

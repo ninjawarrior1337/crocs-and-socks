@@ -1,4 +1,4 @@
-import soundEffect from "../../util/soundEffect";
+import soundEffect from "../../structures/soundEffect";
 
 export default class yousoro extends soundEffect
 {
@@ -8,6 +8,6 @@ export default class yousoro extends soundEffect
             "yousoro", 
             "yousorou", 
             "ヨーソロー"
-        ], "yousoro")
+        ], "yousoro.mp3")
     }
 }
