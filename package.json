@@ -54,7 +54,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-typescript": "^7.3.3",
     "babel-watch": "^7.0.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^2.0.2"
   },
   "scripts": {
     "start": "nodemon --exec babel-node --extensions .ts,.js src/index.js",
