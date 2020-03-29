@@ -1,13 +1,17 @@
-import { Command } from "discord-akairo";
-import {Message} from "discord.js"
 
-export default class thot extends Command
+import {Message} from "discord.js"
+import HanamaruCommand from "../../structures/HanamaruCommand";
+
+export default class thot extends HanamaruCommand
 {
-    constructor()
+    constructor(client)
     {
-        super("thot", {
-            typing: true,
-            aliases: ["thot"]
+        super(client, {
+            name: "thot",
+            aliases: ["thot"],
+            group: "fun",
+            memberName: "adrian",
+            description: "Thot lol"
         })
     }
 

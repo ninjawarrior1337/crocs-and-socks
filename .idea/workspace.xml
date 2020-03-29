@@ -2,61 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf163a79-6bf9-42d0-a3de-dd5d29f241d0" name="Default Changelist" comment="ehh, ill organise the new js file later">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/01_Chika.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/02_Riko.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/03_Kanan.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/04_Dia.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/05_You.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/06_Yoshiko.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/07_Hanamaru.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/08_Mari.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/aqoursbushimo/09_Ruby.ogg.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audio/clashroyale.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/copypasta/thot.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/fun/bushimoaqours.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/fun/clashroyale.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/fun/fuck.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/music/play.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/settings/settings.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/Command.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/Command.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/LowDbProvider.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/soundEffect.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structures/soundEffectFromFolder.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crocks-and-socks-reborn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crocks-and-socks-reborn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bot.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/HanamaruCommand.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/structures/settings.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/AnimeSearch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/BishopListener.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/GenericMessagesListener.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/NoBattleRoyale.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/audio/c.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/audio/c.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/audio/chinese2.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/audio/chinese2.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/adrian.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/copypasta/adrian.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/anchan.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/anchan.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/migration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/migration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/morse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/morse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/nitro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/nitro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/randomPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/randomPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/fun/ricegum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/fun/ricegum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/music/play.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/music/volume.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/music/volume.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/settings/earRape.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/settings/earRape.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/settings/setAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/settings/setAvatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/weeb/lovelive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/weeb/lovelive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/weeb/miraizura.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/weeb/miraizura.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/weeb/theworld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/weeb/theworld.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/weeb/yousoro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/weeb/yousoro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/soundEffect.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/copypasta/adrian.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/copypasta/adrian.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/copypasta/thot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/copypasta/thot.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/help.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/Command.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/Command.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/LowDbProvider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structures/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/structures/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,34 +52,29 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="11.13.0" />
+    <property name="js.last.introduce.type" value="VAR" />
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="ts.external.directory.path" value="D:\NodeJS Stuff\crocks-and-socks-reborn\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\NodeJS Stuff\crocks-and-socks-reborn\imgs" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="js.build_tools.npm">
@@ -151,6 +112,7 @@
       <workItem from="1567124759126" duration="6519000" />
       <workItem from="1567274212818" duration="9348000" />
       <workItem from="1567286266839" duration="16413000" />
+      <workItem from="1585464557600" duration="3251000" />
     </task>
     <task id="LOCAL-00001" summary="changed text to work on linux">
       <created>1540946977973</created>
@@ -185,6 +147,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/bot.js" />
+        <option value="$PROJECT_DIR$/src/structures/client.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -206,5 +174,23 @@
     <MESSAGE value="modified how audio works" />
     <MESSAGE value="ehh, ill organise the new js file later" />
     <option name="LAST_COMMIT_MESSAGE" value="ehh, ill organise the new js file later" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1778" y="985" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585467415721">
+      <screen x="1080" y="722" width="1920" height="1080" />
+    </state>
+    <state x="1778" y="985" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/3000.722.1920.1080/0.0.1080.1920/1080.722.1920.1080@1080.722.1920.1080" timestamp="1585467415721" />
+    <state x="1526" y="873" key="SettingsEditor" timestamp="1585467550268">
+      <screen x="1080" y="722" width="1920" height="1080" />
+    </state>
+    <state x="1526" y="873" key="SettingsEditor/3000.722.1920.1080/0.0.1080.1920/1080.722.1920.1080@1080.722.1920.1080" timestamp="1585467550268" />
+    <state x="1789" y="862" key="refactoring.ChangeSignatureDialog" timestamp="1585467725718">
+      <screen x="1080" y="722" width="1920" height="1080" />
+    </state>
+    <state x="1789" y="862" key="refactoring.ChangeSignatureDialog/3000.722.1920.1080/0.0.1080.1920/1080.722.1920.1080@1080.722.1920.1080" timestamp="1585467725718" />
+    <state x="1703" y="949" width="672" height="678" key="search.everywhere.popup" timestamp="1585465090262">
+      <screen x="1080" y="722" width="1920" height="1080" />
+    </state>
+    <state x="1703" y="949" width="672" height="678" key="search.everywhere.popup/3000.722.1920.1080/0.0.1080.1920/1080.722.1920.1080@1080.722.1920.1080" timestamp="1585465090262" />
   </component>
 </project>
