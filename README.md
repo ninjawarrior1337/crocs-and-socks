@@ -1,6 +1,6 @@
 # Crocks And Socks
 
-The Discord Bot of The Future (未来ずら！) (Mirai Zura!)
+The Discord Bot of The Future (未来ずら！) (Mirai Zura!) (This bot will be archived and replaced with something wayyyy better soon.)
 
 # DISCLAIMER
 I AM **NOT RESPONSIBLE IF THE BOT SENDS NSFW PICS IN A CHAT WITH THE USE OF THE REDDIT OR ANY OTHER COMMAND**, YOU HAVE BEEN WARNED.
